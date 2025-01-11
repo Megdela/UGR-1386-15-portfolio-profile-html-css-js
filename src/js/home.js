@@ -1,20 +1,23 @@
 var slider_img = document.querySelector(".slider-img");
-var images = ["images/Mekdelawit2.JPG","images/Mekdelawit1.jpg"];
+var images = ["src/images/Mekdelawit2.JPG", "src/images/Mekdelawit1.jpg"];
 var i = 0;
+
 function prev() {
-  if (i <= 0) {
-    i = images.length;
-    i--;
-    return setImg();
+  i--; 
+  if (i < 0) {
+    i = images.length - 1; 
   }
+  setImg(); 
 }
+
 function next() {
-  if (i >= images.length - 1) {
-    i = -1;
-    i++;
-    return setImg();
+  i++; 
+  if (i >= images.length) {
+    i = 0; 
   }
+  setImg(); 
 }
+
 function setImg() {
-  return slider_img.setAttribute("src", "images/" + images[i]);
+  slider_img.setAttribute("src", images[i]); 
 }
