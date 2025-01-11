@@ -1,5 +1,5 @@
 var slider_img = document.querySelector(".slider-img");
-var images = ["Mekdelawit2.JPG","Mekdelawit1.jpg"];
+var images = ["Mekdelawit2.JPG","src/images/Mekdelawit1.jpg"];
 var i = 0;
 function prev() {
   if (i <= 0) {
@@ -16,5 +16,5 @@ function next() {
   }
 }
 function setImg() {
-  return slider_img.setAttribute("src", "images/" + images[i]);
+  return slider_img.setAttribute("src", "src/images/" + images[i]);
 }
