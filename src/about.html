@@ -4,24 +4,51 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>About</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Emblema+One&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+      <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/about.css" />
   </head>
   <body>
     <header>
       <div class="profile">
-        <img src="/src/images/profile_pic.png" alt="Profile picture" />
+        <img src="images/profile_pic.png" alt="Profile picture" />
         <h1>Portfolio</h1>
       </div>
-      <div class="menu-icon">
-        <img src="/src/images/menu-icon.svg" alt="Menu" />
-      </div>
+      <img
+        src="images/menu-icon.svg"
+        alt="Menu"
+        onclick="showSidebar()"
+        class="menu"
+      />
       <nav id="main-navbar">
-        <a href="/src/home.html">Home</a>
-        <a href="/src/about.html">About</a>
-        <a href="/src/project.html">Project</a>
-        <a href="/src/adventure.html">Adventure</a>
-        <a href="/src/contact.html">Contact</a>
+        <a href="../index.html">Home</a>
+        <a href="about.html" class="active">About</a>
+        <a href="project.html">Project</a>
+        <a href="adventure.html">Adventure</a>
+        <a href="contact.html">Contact</a>
       </nav>
     </header>
+    <nav class="sidebar">
+      <img
+        src="images/close-icon.svg"
+        alt="Close"
+        onclick="hideSidebar()"
+        class="close-icon"
+      />
+
+      <a href="../index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="project.html">Project</a>
+      <a href="adventure.html">Adventure</a>
+      <a href="contact.html">Contact</a>
+    </nav>
 
     <hr />
 
@@ -29,7 +56,7 @@
       <section id="about">
         <h2>About</h2>
         <div class="about-container">
-          <img src="/src/images/Mekdi_2.JPG" alt="Mekdelawit's picture" />
+          <img src="images/Mekdi_2.JPG" alt="Mekdelawit's picture" />
           <div class="about-description">
             <p>
               I'm Mekdelawit. I am currently studying software engineering at
@@ -44,7 +71,6 @@
 
       <section id="education">
         <h3>Education</h3>
-
         <div class="education-mobile-portrait">
           <table>
             <tbody>
@@ -74,7 +100,7 @@
             </tbody>
           </table>
         </div>
-        <!-- education part for all except mobie portrait -->
+        <!-- Education part for all except mobile portrait -->
         <div class="education-table">
           <table>
             <thead>
@@ -108,13 +134,20 @@
       </section>
 
       <section id="hobbies">
-        <h3>Hobby</h3>
+        <h3>Hobbies</h3>
         <div class="hobbies">
           <ol>
             <li>
-              Listening to classical music<audio
-                src="/src/audios/classical-music.m4a"
-                controls
+              Listening to classical music
+              <button
+                class="play-pause-button"
+                onclick="togglePlayPause()"
+                id="play-audio"
+                style="cursor: pointer"
+              ></button>
+              <audio
+                id="audio-element"
+                src="audios/classical-music.m4a"
               ></audio>
             </li>
             <li>Coding</li>
@@ -126,34 +159,53 @@
       <section id="skills">
         <h3>Skills</h3>
         <div class="skills-wrapper">
-          <img src="/src/images/html-5-logo.svg" alt="HTML5 logo" />
-          <img src="/src/images/css3-logo.svg" alt="CSS3 logo" />
-          <img src="/src/images/python-logo.svg" alt="Python logo" />
-          <img src="/src/images/java-logo.svg" alt="Java logo" />
-          <img src="/src/images/react-logo.svg" alt="React logo" />
-          <img src="/src/images/javascript-logo.svg" alt="JavaScript logo" />
+          <img src="images/html-5-logo.svg" alt="HTML5 logo" />
+          <img src="images/css3-logo.svg" alt="CSS3 logo" />
+          <img src="images/python-logo.svg" alt="Python logo" />
+          <img src="images/java-logo.svg" alt="Java logo" />
+          <img src="images/react-logo.svg" alt="React logo" />
+          <img src="images/javascript-logo.svg" alt="JavaScript logo" />
         </div>
       </section>
     </main>
 
     <footer class="navbar-tablet-landscape">
-      <nav id="footer-navbar">
-        <a href="/src/home.html"
-          ><img src="/src/images/home-icon.svg" alt="Home Page"
-        /></a>
-        <a href="/src/about.html"
-          ><img src="/src/images/about-icon.svg" alt="About Page"
-        /></a>
-        <a href="/src/project.html"
-          ><img src="/src/images/project-icon.svg" alt="Project Page"
-        /></a>
-        <a href="/src/adventure.html"
-          ><img src="/src/images/adventure-icon.svg" alt="Adventure Page"
-        /></a>
-        <a href="/src/contact.html"
-          ><img src="/src/images/contact-icon.svg" alt="Contact Page"
-        /></a>
-      </nav>
+     <nav id="footer-navbar">
+        <ul>
+            <li >
+                <a href="../index.html">
+                    <img src="images/home-icon.svg" alt="Home Page" />
+                    <p>Home</p>
+                </a>
+            </li>
+            <li class="active">
+                <a href="about.html">
+                    <img src="images/about-icon.svg" alt="About Page" />
+                    <p>About</p>
+                </a>
+            </li>
+            <li>
+                <a href="project.html">
+                    <img src="images/project-icon.svg" alt="Project Page" />
+                    <p>Project</p>
+                </a>
+            </li>
+            <li>
+                <a href="adventure.html">
+                    <img src="images/adventure-icon.svg" alt="Adventure Page" />
+                    <p>Adventure</p>
+                </a>
+            </li>
+            <li>
+                <a href="contact.html">
+                    <img src="images/contact-icon.svg" alt="Contact Page" />
+                    <p>Contact</p>
+                </a>
+            </li>
+        </ul>
+    </nav>
     </footer>
+
+   <script src="js/script.js"></script>
   </body>
 </html>

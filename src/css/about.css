@@ -1,0 +1,723 @@
+/* mobile portrait */
+@media only screen and (max-width: 480px) {
+  
+   nav#main-navbar, .education-table, footer {
+    display: none;
+  }
+  main {
+    padding: 0% 1% 0% 10%;
+  }
+
+  h2 {
+    font-size: 28px;
+    margin: 10px 0;
+    color: #192240;
+  }
+  h3 {
+    font-size: 24px;
+    margin: 10px 0;
+    color: #192240;
+  }
+  h4 {
+    font-size: 20px;
+    margin-bottom: 5px;
+    padding-left: 20px;
+  }
+ 
+  .about-container {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    text-align: left;
+    font-size: 18px;
+  }
+
+  .about-container img {
+    width: 70%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+
+  .about-description p {
+    font-size: 1em;
+    margin: 0;
+  }
+
+  .education-mobile-portrait table {
+    background-color: #f6f6f9;
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #8086a6;
+  }
+
+  .education-mobile-portrait table td {
+    width: 100%;
+  }
+
+  .education-mobile-portrait table td h2,
+  .education-mobile-portrait table td p {
+    width: 100%;
+    border-top: 1px solid #8086a6;
+    border-bottom: 1px solid #8086a6;
+    padding: 10px 20px;
+    box-sizing: border-box;
+  }
+  .education-mobile-portrait table td p {
+    font-size: 18px;
+  }
+
+ 
+  /* Hobbies Section */
+
+  .hobbies ol {
+    padding-left: 25px;
+    margin-bottom: 20px;
+  }
+
+  .hobbies li {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  .hobbies audio {
+    display: none;
+  }
+
+  .play-pause-button {
+    width: 50px;
+    height: 50px;
+    background-color: #4b62d8;
+    border: none;
+    border-radius: 50%;
+    display: inline-block;
+    justify-content: center;
+    margin-left: 4%;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.7);
+  }
+
+  .play-pause-button:before {
+    content: "▶";
+    font-size: 25px;
+    color: white;
+  }
+
+  .play-pause-button.paused:before {
+    content: "❚❚";
+    font-size: 24px;
+    color: white;
+  }
+
+  /* Skills Section */
+
+  .skills-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin: 10px 0;
+  }
+
+  .skills-wrapper img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .skills-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1px;
+    justify-items: left;
+  }
+
+  .skills-wrapper img {
+    width: 30px;
+    height: 60px;
+  }
+
+
+}
+
+/* Mobile Landscape  */
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+  .sidebar,
+  .menu,
+  .close-icon,
+nav#main-navbar,
+  .education-mobile-portrait {
+    display: none;
+  }
+  main {
+    padding: 0% 10%;
+  }
+  h2 {
+    font-size: 28px;
+    margin: 10px 0;
+    color: #192240;
+    text-align: center;
+  }
+  h3 {
+    font-size: 24px;
+    margin: 15px 0;
+    color: #192240;
+    text-align: center;
+  }
+
+  .about-container {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    text-align: left;
+    gap: 15px;
+  }
+
+  .about-container img {
+    width: 120px;
+    height: 160px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.3);
+  }
+
+  .about-description p {
+    font-size: 16px;
+    margin: -4em 0;
+  }
+
+  /* Education Section */
+
+  table {
+    border-collapse: collapse;
+    width: 90%;
+    margin: 0 7%;
+    background-color: #f6f6f9;
+  }
+
+  table,
+  th,
+  td {
+    border: 1px solid #8086a6;
+  }
+
+  th,
+  td {
+    padding: 1%;
+    text-align: center;
+  }
+
+  thead th {
+    font-weight: bold;
+  }
+
+  .hobbies {
+    counter-reset: list-counter;
+  }
+
+  .hobbies ol {
+    margin: 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 4em;
+  }
+
+  .hobbies li {
+    font-size: 16px;
+    display: flex;
+    justify-items: center;
+    position: relative;
+  }
+
+  .hobbies li::before {
+    counter-increment: list-counter;
+    content: counter(list-counter) ". ";
+    margin-right: 8px;
+  }
+
+  .play-pause-button {
+    width: 50px;
+    height: 50px;
+    background-color: #4b62d8;
+    border: none;
+    border-radius: 50%;
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.7);
+  }
+
+  .play-pause-button:before {
+    content: "▶";
+    font-size: 18px;
+    color: white;
+  }
+
+  .play-pause-button.paused:before {
+    content: "❚❚";
+    font-size: 18px;
+    color: white;
+  }
+
+  /* Skills Section */
+
+  .skills-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-left: 20%;
+  }
+
+  .skills-wrapper img {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 10px;
+  }
+
+
+}
+
+@media only screen and (min-width: 769px) and (max-width: 959px) {
+  nav#main-navbar,
+  .sliding-image,
+  .sidebar,
+  footer,
+  .education-mobile-portrait {
+    display: none;
+  }
+  .menu,
+  .close-icon {
+    height: 90px;
+    margin-right: 5%;
+  }
+  .sidebar {
+    margin-top: 0;
+    padding: 10px;
+  }
+  main {
+    padding: 0% 5%;
+  }
+
+  h2 {
+    font-size: 30px;
+    margin: 10px 0;
+    color: #192240;
+    text-align: center;
+  }
+  h3 {
+    font-size: 26px;
+    margin: 15px 0;
+    color: #192240;
+    text-align: center;
+  }
+
+  .about-container {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    text-align: left;
+    gap: 15px;
+    padding: 0 10%;
+  }
+
+  .about-container img {
+    width: 40%;
+    height: 160px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.3);
+  }
+
+  .about-description p {
+    font-size: 18px;
+    margin: -4em 0;
+  }
+  /* Education */
+  .education-table,
+  .education-mobile-portrait {
+    margin: 0;
+    padding: 0;
+  }
+  table {
+    border-collapse: collapse;
+    width: 90%;
+    margin: 0 7%;
+    background-color: #f6f7fa;
+  }
+  table,
+  th,
+  td {
+    border: 1px solid #8086a6;
+  }
+
+  th,
+  td {
+    padding: 2%;
+    text-align: center;
+  }
+
+  thead th {
+    font-weight: bold;
+  }
+
+  /* Hobbies */
+
+  .hobbies {
+    counter-reset: list-counter;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 20px 0;
+  }
+
+  .hobbies ol {
+    padding-left: 0;
+    margin: 0;
+  }
+
+  .hobbies li {
+    font-size: 18px;
+    margin-bottom: 10px;
+    padding-left: 20px;
+    text-align: left;
+  }
+
+  .hobbies audio {
+    display: none;
+  }
+
+  .hobbies-container {
+    display: flex;
+    align-items: center;
+  }
+
+  .play-pause-button {
+    width: 50px;
+    height: 50px;
+    background-color: #4b62d8;
+    border: none;
+    border-radius: 50%;
+    margin-left: 20px;
+    cursor: pointer;
+    outline: none;
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.7);
+  }
+
+  .play-pause-button:before {
+    content: "▶";
+    font-size: 24px;
+    color: white;
+  }
+
+  .play-pause-button.paused:before {
+    content: "❚❚";
+    font-size: 24px;
+    color: white;
+  }
+
+  /* Skills Section */
+
+  .skills-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+    justify-items: center;
+    align-items: center;
+    margin-top: 30px;
+  }
+
+  .skills-wrapper img {
+    width: 80px;
+    height: 80px;
+  }
+}/* tablet portrait */
+
+/* tablet landscape */
+@media only screen and (min-width: 960px) and (max-width: 1024px) {
+  .sidebar,
+  .menu,
+  .close-icon,
+  nav#main-navbar,
+  .education-mobile-portrait {
+    display: none;
+  }
+  main {
+    padding: 0% 15%;
+  }
+  h2 {
+    font-size: 30px;
+    margin: 10px 0;
+    color: #192240;
+    text-align: center;
+  }
+  h3 {
+    font-size: 26px;
+    margin: 15px 0;
+    color: #192240;
+    text-align: center;
+  }
+  .about-container {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    text-align: left;
+    gap: 4em;
+    margin-top: -40px;
+  }
+
+  .about-container img {
+    width: 120px;
+    height: 160px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.3);
+  }
+
+  .about-description p {
+    font-size: 16px;
+    margin: 0;
+  }
+
+  /* Education */
+  .education-table,
+  .education-mobile-portrait {
+    margin: 0;
+    padding: 0;
+  }
+  table {
+    border-collapse: collapse;
+    width: 90%;
+    margin: 0 7%;
+    background-color: #f6f7fa;
+  }
+
+  table,
+  th,
+  td {
+    border: 1px solid #8086a6;
+  }
+
+  th,
+  td {
+    padding: 2%;
+    text-align: center;
+  }
+
+  thead th {
+    font-weight: bold;
+  }
+
+  /* hobbies */
+   .hobbies {
+    counter-reset: list-counter;
+  }
+
+  .hobbies ol {
+    margin: 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 4em;
+  }
+
+  .hobbies li {
+    font-size: 16px;
+    display: flex;
+    justify-items: center;
+    position: relative;
+  }
+
+  .hobbies li::before {
+    counter-increment: list-counter;
+    content: counter(list-counter) ". ";
+    margin-right: 8px;
+  }
+  .hobbies audio {
+    display: none; /* Hide audio element */
+  }
+
+  
+
+  .play-pause-button {
+    width: 50px;
+    height: 50px;
+    background-color: #4b62d8;
+    border: none;
+    border-radius: 50%;
+    margin-left: 20px;
+    cursor: pointer;
+    outline: none;
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.7);
+  }
+
+  .play-pause-button:before {
+    content: "▶";
+    font-size: 24px;
+    color: white;
+  }
+
+  .play-pause-button.paused:before {
+    content: "❚❚";
+    font-size: 24px;
+    color: white;
+  }
+
+  /* Skills Section */
+
+  .skills-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    justify-items: center; 
+    align-items: center; 
+    margin-top: 30px;
+  }
+
+  .skills-wrapper img {
+    width: 50px;
+    height: 50px;
+  }
+}
+/* desktop */
+@media only screen and (min-width: 1025px) {
+   .sidebar,
+  .menu,
+  .close-icon,
+  footer,
+  .education-mobile-portrait {
+    display: none;
+  }
+
+  main {
+    padding: 0% 10%;
+  }
+  h2 {
+    font-size: 32px;
+    margin: 10px 0;
+    color: #18213f;
+    text-align: center;
+  }
+  h3 {
+    font-size: 30px;
+    color: #18213f;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+  .about-container {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    text-align: left;
+    gap: 25px;
+  }
+
+  .about-container img {
+    width: 300px;
+    height: 250px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.3);
+    margin-top: -40px;
+  }
+
+  .about-description p {
+    font-size: 20px;
+    margin-top: -5em;
+  }
+
+/* education */
+  .education-table,
+  .education-mobile-portrait {
+    margin: 0;
+    padding: 0;
+  }
+  table {
+    border-collapse: collapse;
+    width: 90%;
+    margin: 4% 7%;
+    background-color: #f6f6f9;
+  }
+
+  table,
+  th,
+  td {
+    border: 1px solid #8086a6;
+  }
+
+  th,
+  td {
+    padding: 2%;
+    text-align: center;
+  }
+
+  thead th {
+    font-weight: bold;
+  }
+
+  .hobbies {
+    counter-reset: list-counter;
+  }
+
+  .hobbies ol {
+    margin: 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 4em;
+  }
+
+  .hobbies li {
+    font-size: 16px;
+    display: flex;
+    justify-items: center;
+    position: relative;
+  }
+
+  .hobbies li::before {
+    counter-increment: list-counter;
+    content: counter(list-counter) ". ";
+    margin-right: 8px;
+  }
+
+  .play-pause-button {
+    width: 50px;
+    height: 50px;
+    background-color: #4b62d8;
+    border: none;
+    border-radius: 50%;
+
+    cursor: pointer;
+    outline: none;
+    margin: 30px 0px 0px -90px;
+  }
+
+  .play-pause-button:before {
+    content: "▶"; 
+    font-size: 24px;
+    color: white;
+  }
+
+  .play-pause-button.paused:before {
+    content: "❚❚"; 
+    font-size: 24px;
+    color: white;
+  }
+
+  
+
+  /* Skills Section */
+
+  .skills-wrapper {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    justify-items: center; 
+    align-items: center; 
+  }
+
+  .skills-wrapper img {
+    width: 60px;
+    height: 60px;
+  }
+}

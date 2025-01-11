@@ -3,29 +3,59 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>Adventure</title>
+        <link
+      href="https://fonts.googleapis.com/css2?family=Emblema+One&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/adventure.css" />
   </head>
 
   <body>
-    <header>
+  <header>
       <div class="profile">
-        <img src="/src/images/profile_pic.png" alt="Profile picture" />
+        <img src="images/profile_pic.png" alt="Profile picture" />
         <h1>Portfolio</h1>
       </div>
-      <div class="menu-icon">
-        <img src="/src/images/menu-icon.svg" alt="Menu" />
-      </div>
+       <img
+        src="images/menu-icon.svg"
+        alt="Menu"
+        onclick="showSidebar()"
+        class="menu"
+      />
 
-      <nav id="navbar" class="main-nav">
-        <a href="/src/home.html">Home</a>
+      <nav id="main-navbar">
+        <a href="../index.html">Home</a>
         <a href="/src/about.html">About</a>
-        <a href="/src/project.html">Project</a>
-        <a href="/src/adventure.html">Adventure</a>
-        <a href="/src/contact.html">Contact</a>
+        <a href="project.html" >Project</a>
+        <a href="adventure.html" class="active">Adventure</a>
+        <a href="contact.html" >Contact</a>
       </nav>
     </header>
+  <nav class="sidebar">
+      <img
+        src="images/close-icon.svg"
+        alt="Close"
+        onclick="hideSidebar()"
+        class="close-icon"
+      />
 
+      <a href="../index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="project.html">Project</a>
+      <a href="adventure.html">Adventure</a>
+      <a href="contact.html">Contact</a>
+    </nav>
     <hr />
+
+
+
 
     <main>
       <section class="adventure-intro">
@@ -34,82 +64,104 @@
       </section>
 
       <section class="adventure-section">
-        <div class="adventure-grid">
+        <div class="wrapper">
           <figure class="unity-park">
-            <img src="/src/images/UnityPark.jpeg" alt="Unity Park" />
+            <img src="images/UnityPark.jpeg" alt="Unity Park" />
             <figcaption>Unity Park, Addis Ababa</figcaption>
           </figure>
           <article class="unity-description">
             <h4>Unity Park</h4>
-            
-              Unity Park was established in 2019. The park is located at the
-              Grand Palace in Addis Ababa, Ethiopia, a compound that has been a
-              seat of state for more than a century and is finally open to the
-              public.
-            
+            Unity Park was established in 2019. The park is located at the Grand
+            Palace in Addis Ababa, Ethiopia, a compound that has been a seat of
+            state for more than a century and is finally open to the public.
           </article>
+        </div>
 
+        <div class="wrapper friendship">
+          <article class="friendship-description">
+            <h4>Friendship Square</h4>
+            I enjoyed walking around the park; it's so green and full of
+            beautiful flowers. I admire the thought of planting the metal gym
+            equipment for simple workouts; it's really nice for the young
+            generations finding a place to hang out and work out at the same
+            time.
+          </article>
           <figure class="friendship-square">
             <img
-              src="/src/images/FriendshipPark.jpeg"
+              src="images/FriendshipPark.jpeg"
               alt="Friendship Square"
             />
             <figcaption>Friendship Square, Addis Ababa</figcaption>
           </figure>
-<article class="friendship-description">
-    <h4>Friendship Square</h4>
-    I enjoyed walking around the park, it's so green and full of beautiful flowers. I admire the thought of planting the metal gym equipments for a simple workouts, it's really nice for the young generations finding a place to hangout and workout at the same time.
-</article>
+        </div>
 
+        <div class="wrapper">
           <figure class="debrelibanos">
             <img
-              src="/src/images/Debrelibanos.jpeg"
+              src="images/Debrelibanos.jpeg"
               alt="Debre Libanos Monastery"
             />
             <figcaption>Debre Libanos Monastery</figcaption>
           </figure>
-          <article class="debrelibanos-description">
+          <article class="description debrelibanos" >
             <h4>Debre Libanos Monastery</h4>
-            
-              Debre Libanos is an Ethiopian Orthodox Tewahedo monastery, lying
-              northwest of Addis Ababa in the North Shewa Zone of the Oromia
-              Region.
-            
+            Debre Libanos is an Ethiopian Orthodox Tewahedo monastery, lying
+            northwest of Addis Ababa in the North Shewa Zone of the Oromia
+            Region.
           </article>
         </div>
       </section>
 
       <section class="video-section">
         <h3>Video Highlight</h3>
-        <video controls>
-          <source src="/src/videos/FriendshipPark_night.mp4" type="video/mp4" />
-          
+        <div class="video-description">
+          <video controls>
+          <source src="videos/FriendshipPark_night.mp4" type="video/mp4" />
         </video>
         <p>
           Delighted to visit Friendship Park in Addis Ababa, featuring
           captivating dancing water & vibrant lights, similar to Dubai & Vegas.
         </p>
+        </div>
       </section>
     </main>
 
     <footer class="navbar-tablet-landscape">
-      <nav id="footer-navbar" class="footer-nav">
-        <a href="/src/home.html"
-          ><img src="/src/images/home-icon.svg" alt="Home Page"
-        /></a>
-        <a href="/src/about.html"
-          ><img src="/src/images/about-icon.svg" alt="About Page"
-        /></a>
-        <a href="/src/project.html"
-          ><img src="/src/images/project-icon.svg" alt="Project Page"
-        /></a>
-        <a href="/src/adventure.html"
-          ><img src="/src/images/adventure-icon.svg" alt="Adventure Page"
-        /></a>
-        <a href="/src/contact.html"
-          ><img src="/src/images/contact-icon.svg" alt="Contact Page"
-        /></a>
-      </nav>
+     <nav id="footer-navbar">
+        <ul>
+            <li >
+                <a href="../index.html">
+                    <img src="images/home-icon.svg" alt="Home Page" />
+                    <p>Home</p>
+                </a>
+            </li>
+            <li>
+                <a href="about.html">
+                    <img src="images/about-icon.svg" alt="About Page" />
+                    <p>About</p>
+                </a>
+            </li>
+            <li >
+                <a href="project.html">
+                    <img src="images/project-icon.svg" alt="Project Page" />
+                    <p>Project</p>
+                </a>
+            </li>
+            <li class="active">
+                <a href="adventure.html">
+                    <img src="images/adventure-icon.svg" alt="Adventure Page" />
+                    <p>Adventure</p>
+                </a>
+            </li>
+            <li>
+                <a href="contact.html">
+                    <img src="images/contact-icon.svg" alt="Contact Page" />
+                    <p>Contact</p>
+                </a>
+            </li>
+        </ul>
+    </nav>
     </footer>
+   <script src="js/script.js"></script>
   </body>
 </html>

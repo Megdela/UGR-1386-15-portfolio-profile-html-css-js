@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Emblema+One&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+      <link rel="stylesheet" href="src/css/style.css" />
+    <link rel="stylesheet" href="src/css/home.css" />
+    
+    <title>Home</title>
+  </head>
+  <body>
+    <header>
+      <div class="profile">
+        <img src="src/images/profile_pic.png" alt="Profile picture" />
+        <h1>Portfolio</h1>
+      </div>
+      <img
+        src="src/images/menu-icon.svg"
+        alt="Menu"
+        onclick="showSidebar()"
+        class="menu"
+      />
+      <nav id="main-navbar">
+        <a href="index.html" class="active">Home</a>
+        <a href="src/about.html">About</a>
+        <a href="src/project.html">Project</a>
+        <a href="src/adventure.html">Adventure</a>
+        <a href="src/contact.html">Contact</a>
+      </nav>
+    </header>
+    <nav class="sidebar">
+      <img
+        src="src/images/close-icon.svg"
+        alt="Close"
+        onclick="hideSidebar()"
+        class="close-icon"
+      />
+      <a href="index.html">Home</a>
+      <a href="src/about.html">About</a>
+      <a href="src/project.html">Project</a>
+      <a href="src/adventure.html">Adventure</a>
+      <a href="src/contact.html">Contact</a>
+    </nav>
+
+    <hr />
+    <main>
+      <!-- In desktop -->
+      <div class="sliding-image">
+        <button class="arrow left-arrow" onClick="prev()">&#10094;</button> <div class="img-box">
+          <img
+            src="src/images/Mekdelawit1.jpg"
+            alt="Mekdelawit picture"
+            class="slider-img"
+          />
+        </div>
+
+       
+        <button class="arrow right-arrow" onClick="next()">&#10095;</button>
+      </div>
+      <!-- This applies for all -->
+      <div class="description">
+        <img src="src/images/Mekdelawit3.JPG" alt="Mekdelawit's picture" />
+        <p>
+          Hi, I am <span>Mekdelawit Gebre.</span> <br />I am a
+          <span class="long">front-end developer.</span>
+        </p>
+        <p></p>
+      </div>
+
+      <!-- Link boxes for tablet-portrait and mobile-portrait -->
+      <div class="navbar-boxes">
+        <nav id="link-navbar">
+          <div class="about-link"><a href="src/about.html">About</a></div>
+          <div class="project-link">
+            <a href="src/project.html">Project</a>
+          </div>
+          <div class="adventure-link">
+            <a href="src/adventure.html">Adventure</a>
+          </div>
+          <div class="contact-link">
+            <a href="src/contact.html">Contact</a>
+          </div>
+        </nav>
+      </div>
+    </main>
+
+    <!-- Navbar for tablet-landscape and mobile-landscape -->
+    <footer class="navbar-tablet-mobile-landscape">
+    <nav id="footer-navbar">
+        <ul>
+            <li class="active">
+                <a href="index.html">
+                    <img src="src/images/home-icon.svg" alt="Home Page" />
+                    <p>Home</p>
+                </a>
+            </li>
+            <li>
+                <a href="src/about.html">
+                    <img src="src/images/about-icon.svg" alt="About Page" />
+                    <p>About</p>
+                </a>
+            </li>
+            <li>
+                <a href="src/project.html">
+                    <img src="src/images/project-icon.svg" alt="Project Page" />
+                    <p>Project</p>
+                </a>
+            </li>
+            <li>
+                <a href="src/adventure.html">
+                    <img src="src/images/adventure-icon.svg" alt="Adventure Page" />
+                    <p>Adventure</p>
+                </a>
+            </li>
+            <li>
+                <a href="src/contact.html">
+                    <img src="src/images/contact-icon.svg" alt="Contact Page" />
+                    <p>Contact</p>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    </footer>
+
+    <script src="src/js/home.js"></script>
+  </body>
+</html>

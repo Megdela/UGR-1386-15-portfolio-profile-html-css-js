@@ -4,100 +4,152 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Emblema+One&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+      <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/contact.css" />
   </head>
   <body>
     <header>
       <div class="profile">
-        <img src="/src/images/profile_pic.png" alt="Profile picture" />
+        <img src="images/profile_pic.png" alt="Profile picture" />
         <h1>Portfolio</h1>
       </div>
-      <div class="menu-icon">
-        <img src="/src/images/menu-icon.svg" alt="Menu" />
-      </div>
-
-      <nav id="navbar">
-        <a href="/src/home.html">Home</a>
-        <a href="/src/about.html">About</a>
-        <a href="/src/project.html">Project</a>
-        <a href="/src/adventure.html">Adventure</a>
-        <a href="/src/contact.html">Contact</a>
+      <img
+        src="images/menu-icon.svg"
+        alt="Menu"
+        onclick="showSidebar()"
+        class="menu"
+      />
+      <nav id="main-navbar">
+        <a href="../index.html">Home</a>
+        <a href="about.html" >About</a>
+        <a href="project.html">Project</a>
+        <a href="adventure.html">Adventure</a>
+        <a href="contact.html" class="active">Contact</a>
       </nav>
     </header>
+    <nav class="sidebar">
+      <img
+        src="images/close-icon.svg"
+        alt="Close"
+        onclick="hideSidebar()"
+        class="close-icon"
+      />
+
+      <a href="../index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="project.html">Project</a>
+      <a href="adventure.html">Adventure</a>
+      <a href="contact.html">Contact</a>
+    </nav>
 
     <hr />
 
     <main>
       <div class="contact">
         <h2>Contact</h2>
-
-        <div class="info-wrap">
+<div class="info-form">
+          <div class="info-wrap">
           <div class="info-item">
-            <img src="/src/images/address-icon.svg" alt="Address Icon" />
-            <h3>Address</h3>
+            <div class="icon-title">
+              <img src="images/address-icon.svg" alt="Address Icon" />
+              <h3>Address</h3>
+            </div>
+
             <p>Addis Ababa, Ethiopia</p>
           </div>
           <div class="info-item">
-            <img src="/src/images/phone-icon.svg" alt="Phone Icon" />
-            <h3>Call Me</h3>
+            <div class="icon-title">
+              <img src="images/phone-icon.svg" alt="Phone Icon" />
+              <h3>Call Me</h3>
+            </div>
+
             <p>+251902503952</p>
           </div>
           <div class="info-item">
-            <img src="/src/images/email-icon.svg" alt="Email Icon" />
-            <h3>Email Me</h3>
+            <div class="icon-title">  <img src="images/email-icon.svg" alt="Email Icon" />
+            <h3>Email Me</h3></div>
+          
             <p>megdela21@gmail.com</p>
           </div>
         </div>
-        <div class="form-group"></div>
-        <form>
-          <div class="form-group">
-            <input
-              type="text"
-              name="name"
-              id="name-field"
-              placeholder="Your name"
-              required=""
-            />
-          </div>
-          <div class="form-group">
-            <input
-              type="email"
-              name="email"
-              id="email-field"
-              placeholder="Your email"
-              required=""
-            />
-          </div>
-          <div class="form-group">
-            <textarea
-              name="message"
-              id="message-field"
-              placeholder="Your message"
-              required=""
-            ></textarea>
-          </div>
-          <button type="submit">Send Message</button>
+        <div class="form-group">
+        <form id="contact-form" onsubmit="return sendMail()">
+            <div class="form-group">
+                <input
+                    type="text"
+                    name="name"
+                    id="name-field"
+                    placeholder="Your name"
+                    required
+                />
+            </div>
+            <div class="form-group">
+                <input
+                    type="email"
+                    name="email"
+                    id="email-field"
+                    placeholder="Your email"
+                    required
+                />
+            </div>
+            <div class="form-group">
+                <textarea
+                    name="message"
+                    id="message-field"
+                    placeholder="Your message"
+                    required
+                ></textarea>
+            </div>
+            <button type="submit">Send Message</button>
         </form>
-      </div>
+    </div>
+
+</div>
 
       <!-- Navbar for tablet-landscape and mobile-landscape -->
       <section class="navbar-tablet-landscape navbar-tablet-landscape">
-        <nav>
-          <a href="/src/home.html"
-            ><img src="/src/images/home-icon.svg" alt="Home Page"
-          /></a>
-          <a href="/src/about.html"
-            ><img src="/src/images/about-icon.svg" alt="About Page"
-          /></a>
-          <a href="/src/project.html"
-            ><img src="/src/images/project-icon.svg" alt="Project Page"
-          /></a>
-          <a href="/src/adventure.html"
-            ><img src="/src/images/adventure-icon.svg" alt="Adventure Page"
-          /></a>
-          <a href="/src/contact.html"
-            ><img src="/src/images/contact-icon.svg" alt="Contact Page"
-          /></a>
-        </nav>
+        <nav id="footer-navbar">
+        <ul>
+            <li >
+                <a href="../index.html">
+                    <img src="images/home-icon.svg" alt="Home Page" />
+                    <p>Home</p>
+                </a>
+            </li>
+            <li>
+                <a href="about.html">
+                    <img src="images/about-icon.svg" alt="About Page" />
+                    <p>About</p>
+                </a>
+            </li>
+            <li >
+                <a href="project.html">
+                    <img src="images/project-icon.svg" alt="Project Page" />
+                    <p>Project</p>
+                </a>
+            </li>
+            <li>
+                <a href="adventure.html">
+                    <img src="images/adventure-icon.svg" alt="Adventure Page" />
+                    <p>Adventure</p>
+                </a>
+            </li>
+            <li class="active">
+                <a href="contact.html">
+                    <img src="images/contact-icon.svg" alt="Contact Page" />
+                    <p>Contact</p>
+                </a>
+            </li>
+        </ul>
+    </nav>
       </section>
     </main>
 
@@ -105,31 +157,35 @@
       <div class="social-icons">
         <div class="github">
           <a href="https://github.com/Megdela" target="_blank">
-            <img src="/src/images/github-logo.svg" alt="Github" />
+            <img src="images/github-logo.svg" alt="Github" />
           </a>
         </div>
 
-        <div class="telegram">
-          <a href="https://t.me/Megdela4" target="_blank">
-            <img src="/src/images/telegram-logo.svg" alt="Telegram" />
-          </a>
-        </div>
-        <div class="intagram">
-          <a href="https://www.instagram.com/g._mekdelawit/" target="_blank">
-            <img src="/src/images/instagram-logo.svg" alt="Instagram" />
-          </a>
-        </div>
-
+        
         <div class="linkedin">
           <a
             href="https://www.linkedin.com/in/mekdelawit-gebre-a4b037236/"
             target="_blank"
           >
-            <img src="/src/images/linkedin-logo.svg" alt="LinkedIn" />
+            <img src="images/linkedin-logo.svg" alt="LinkedIn" />
           </a>
         </div>
+        <div class="telegram">
+          <a href="https://t.me/Megdela4" target="_blank">
+            <img src="images/telegram-logo.svg" alt="Telegram" />
+          </a>
+        </div>
+        <div class="intagram">
+          <a href="https://www.instagram.com/g._mekdelawit/" target="_blank">
+            <img src="images/instagram-logo.svg" alt="Instagram" />
+          </a>
+        </div>
+
       </div>
       <p>&copy; 2024 Mekdelawit G. All rights reserved.</p>
     </footer>
+    <script src="js/script.js">
+    </script>
+  
   </body>
 </html>
